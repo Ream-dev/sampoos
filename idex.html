@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Silk Shampoo — Silky Hair, Naturally Beautiful</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#B8966A;
+  --gold-light:#D4B896;
+  --gold-dark:#8A6B45;
+  --cream:#FAF6F0;
+  --cream-dark:#F0E8DC;
+  --green:#4A6741;
+  --green-light:#6B8F62;
+  --green-pale:#EAF0E8;
+  --white:#FFFFFF;
+  --charcoal:#2C2420;
+  --brown:#5C4033;
+  --text:#3A2E28;
+  --text-light:#7A6E68;
+  --border:#E8DDD4;
+  --shadow:rgba(44,36,32,0.10);
+  --font-display:'Cormorant Garamond',serif;
+  --font-body:'Jost',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:all .4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow:0 2px 20px rgba(0,0,0,0.08);
+}
+.nav-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 2rem;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+}
+.nav-logo{
+  font-family:var(--font-display);
+  font-size:1.75rem;
+  font-weight:600;
+  color:var(--charcoal);
+  text-decoration:none;
+  letter-spacing:-0.5px;
+  white-space:nowrap;
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:all .3s;
+}
+.nav-logo:hover{
+  transform:translateY(-2px);
+}
+.nav-logo span{
+  color:var(--gold);
+  font-style:italic;
+}
+.nav-logo::before{
+  content:'';
+  display:inline-block;
+  width:24px;
+  height:24px;
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23b8966a" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22l-6.15-1.88L7 14.14 2 9.27l6.91-3.01z"/></svg>');
+}
+.nav-logo::after{
+  content:'';
+  display:inline-block;
+  width:24px;
+  height:24px;
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23b8966a" d="M12 22l-3.09-6.26L2 14.73l5-4.87L5.82 2l6.15 1.88L17 9.86l4.89 5.19L12 22z"/></svg>');
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:2.5rem;
+  list-style:none;
+}
+.nav-links a{
+  font-size:.9rem;
+  font-weight:500;
+  color:var(--text-light);
+  text-decoration:none;
+  letter-spacing:.05px;
+  text-transform:uppercase;
+  transition:all .3s;
+  position:relative;
+  padding:0.25rem 0;
+}
+.nav-links a:hover,.nav-links a.active{
+  color:var(--gold);
+}
+.nav-links a:hover::after,.nav-links a.active::after{
+  content:'';
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:var(--gold);
+  border-radius:1px;
+}
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.25rem;
+}
+.nav-btn{
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:var(--text-light);
+  font-size:1.3rem;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  transition:all .3s;
+  position:relative;
+  overflow:hidden;
+}
+.nav-btn:hover{
+  color:var(--gold);
+  background:rgba(184,150,106,0.1);
+  transform:scale(1.1);
+}
+.nav-btn:active{
+  transform:scale(0.95);
+}
+.cart-badge{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  background:var(--gold);
+  color:#fff;
+  font-size:.65rem;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-body);
+  box-shadow:0 2px 4px rgba(0,0,0,0.2);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(184,150,106,0.4);}
+  70%{box-shadow:0 0 0 6px rgba(184,150,106,0);}
+  100%{box-shadow:0 0 0 0 rgba(184,150,106,0);}
+}
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+  padding:.5rem;
+  background:rgba(255,255,255,0.8);
+  border-radius:12px;
+  backdrop-filter:blur(4px);
+  border:1px solid var(--border);
+  transition:all .3s;
+}
+.hamburger:hover{
+  background:rgba(255,255,255,0.9);
+}
+.hamburger span{
+  display:block;
+  width:26px;
+  height:2.5px;
+  background:var(--text);
+  border-radius:2px;
+  transition:all .3s;
+}
+.hamburger.active span:nth-child(1){
+  transform:translateY(6px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+.hamburger.active span:nth-child(3){
+  transform:translateY(-6px) rotate(-45deg);
+}
+
+/* BUTTON STYLES */
+.btn-primary{
+  background:var(--charcoal);
+  color:#fff;
+  border:none;
+  padding:.75rem 2rem;
+  font-family:var(--font-body);
+  font-size:.875rem;
+  font-weight:500;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .3s;
+  border-radius:4px;
+}
+.btn-primary:hover{
+  background:var(--gold);
+}
+.btn-outline{
+  background:transparent;
+  color:var(--charcoal);
+  border:1.5px solid var(--charcoal);
+  padding:.75rem 2rem;
+  font-family:var(--font-body);
+  font-size:.875rem;
+  font-weight:500;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .3s;
+  border-radius:4px;
+}
+.btn-outline:hover{
+  background:var(--charcoal);
+  color:#fff;
+}
+.btn-gold{
+  background:var(--gold);
+  color:#fff;
+  border:none;
+  padding:.75rem 2rem;
+  font-family:var(--font-body);
+  font-size:.875rem;
+  font-weight:500;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .3s;
+  border-radius:4px;
+}
+.btn-gold:hover{
+  background:var(--gold-dark);
+}
+
+/* PAGES */
+.page{display:none;min-height:100vh}
+.page.active{display:block}
+
+/* ======= HOMEPAGE ======= */
+/* HERO */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;background:var(--cream)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#FAF6F0 0%,#F0E8DC 40%,#E8DDD4 100%)}
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#B8966A 1px,transparent 1px);background-size:32px 32px}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 2rem;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding-top:72px}
+.hero-text{}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold-light);color:var(--gold-dark);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.4rem 1rem;margin-bottom:1.5rem}
+.hero-h1{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.15;color:var(--charcoal);margin-bottom:1.25rem}
+.hero-h1 em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:1.05rem;color:var(--text-light);max-width:480px;margin-bottom:2rem;font-weight:300;line-height:1.8}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.hero-stat{}
+.hero-stat-num{font-family:var(--font-display);font-size:1.8rem;font-weight:600;color:var(--charcoal)}
+.hero-stat-label{font-size:.75rem;color:var(--text-light);letter-spacing:.06em;text-transform:uppercase}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-img-wrap{position:relative;width:420px;height:520px}
+.hero-circle-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#E8DDD4,#FAF6F0)}
+.hero-img-placeholder{position:relative;z-index:2;width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bottle-svg{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 20px 40px rgba(44,36,32,.15))}
+.hero-leaf{position:absolute;font-size:3rem;opacity:.3}
+.hero-leaf-1{top:10%;right:0}
+.hero-leaf-2{bottom:15%;left:5%}
+.hero-floating-badge{position:absolute;z-index:3;background:#fff;border:1px solid var(--border);padding:.75rem 1rem;box-shadow:0 8px 24px var(--shadow)}
+.hero-floating-1{top:10%;right:-10%;display:flex;align-items:center;gap:.75rem}
+.hero-floating-2{bottom:15%;left:-10%;display:flex;align-items:center;gap:.75rem}
+.hero-floating-icon{width:36px;height:36px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.hero-floating-text .label{font-size:.65rem;color:var(--text-light);letter-spacing:.08em;text-transform:uppercase}
+.hero-floating-text .value{font-size:.875rem;font-weight:600;color:var(--charcoal)}
+
+/* BENEFITS */
+.section{padding:5rem 2rem}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.75rem}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--charcoal);line-height:1.2}
+.section-title em{color:var(--gold);font-style:italic}
+.section-sub{font-size:1rem;color:var(--text-light);max-width:560px;margin:.75rem auto 0;font-weight:300}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.benefit-card{background:var(--cream);border:1px solid var(--border);padding:2rem 1.5rem;text-align:center;transition:all .3s;cursor:default}
+.benefit-card:hover{background:#fff;box-shadow:0 8px 32px var(--shadow);transform:translateY(-4px)}
+.benefit-icon{width:56px;height:56px;background:var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem;transition:all .3s}
+.benefit-card:hover .benefit-icon{background:var(--gold);transform:scale(1.1)}
+.benefit-name{font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--charcoal);margin-bottom:.4rem}
+.benefit-desc{font-size:.82rem;color:var(--text-light);line-height:1.6}
+
+/* PRODUCTS */
+.products-bg{background:var(--cream)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.75rem}
+.product-card{background:#fff;border:1px solid var(--border);overflow:hidden;transition:all .3s;cursor:pointer;position:relative}
+.product-card:hover{box-shadow:0 12px 40px var(--shadow);transform:translateY(-4px)}
+.product-badge{position:absolute;top:1rem;left:1rem;z-index:2;background:var(--gold);color:#fff;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem}
+.product-wish{position:absolute;top:1rem;right:1rem;z-index:2;width:32px;height:32px;background:#fff;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:.9rem;color:var(--text-light)}
+.product-wish:hover,.product-wish.active{color:#e74c3c;border-color:#e74c3c}
+.product-img-wrap{height:240px;background:linear-gradient(135deg,var(--cream) 0%,var(--cream-dark) 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:all .3s;position:relative}
+.product-card:hover .product-img-wrap{background:linear-gradient(135deg,var(--cream-dark) 0%,var(--gold-light) 30%,var(--cream-dark) 100%)}
+.product-bottle{width:90px;height:180px;transition:transform .4s}
+.product-card:hover .product-bottle{transform:translateY(-8px) rotate(2deg)}
+.product-image{width:100%;height:100%;object-fit:contain;display:block}
+.product-quick{position:absolute;bottom:0;left:0;right:0;background:var(--charcoal);color:#fff;text-align:center;padding:.6rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transform:translateY(100%);transition:transform .3s}
+.product-card:hover .product-quick{transform:translateY(0)}
+.product-info{padding:1.25rem}
+.product-name{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--charcoal);margin-bottom:.4rem;line-height:1.3}
+.product-stars{color:var(--gold);font-size:.85rem;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem}
+.product-stars span{font-size:.75rem;color:var(--text-light);font-family:var(--font-body)}
+.product-price{font-size:1.1rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem}
+.product-price .old{font-size:.85rem;color:var(--text-light);text-decoration:line-through;font-weight:400;margin-left:.5rem}
+.product-add{width:100%;background:var(--charcoal);color:#fff;border:none;padding:.65rem;font-family:var(--font-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.product-add:hover{background:var(--gold)}
+
+/* WHY CHOOSE */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.why-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:2rem 1rem;border:1px solid var(--border);transition:all .3s}
+.why-item:hover{border-color:var(--gold);background:var(--cream)}
+.why-icon{font-size:2rem;margin-bottom:1rem;color:var(--gold)}
+.why-label{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--charcoal);margin-bottom:.3rem}
+.why-desc{font-size:.8rem;color:var(--text-light)}
+
+/* TESTIMONIALS */
+.testimonials-bg{background:var(--charcoal)}
+.testimonials-bg .section-eyebrow{color:var(--gold-light)}
+.testimonials-bg .section-title{color:var(--white)}
+.testimonials-bg .section-sub{color:rgba(255,255,255,.6)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.testimonial-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:2rem;transition:all .3s}
+.testimonial-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.t-stars{color:var(--gold-light);font-size:.9rem;margin-bottom:1rem}
+.t-text{font-family:var(--font-display);font-size:1.1rem;font-weight:300;font-style:italic;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.25rem}
+.t-author{display:flex;align-items:center;gap:.75rem}
+.t-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.85rem;color:var(--charcoal)}
+.t-name{font-size:.875rem;font-weight:500;color:#fff}
+.t-role{font-size:.75rem;color:rgba(255,255,255,.5)}
+
+/* BEFORE AFTER */
+.ba-wrap{max-width:800px;margin:0 auto}
+.ba-slider{position:relative;height:400px;overflow:hidden;cursor:col-resize;user-select:none}
+.ba-before,.ba-after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.ba-before{background:linear-gradient(135deg,#8B7355,#6B5D4F);clip-path:inset(0 50% 0 0)}
+.ba-after{background:linear-gradient(135deg,var(--green-pale),#C8E6D5)}
+.ba-divider{position:absolute;top:0;bottom:0;width:3px;background:#fff;left:50%;transform:translateX(-50%);z-index:10}
+.ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:#fff;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:11;font-size:.75rem;color:var(--charcoal)}
+.ba-label{font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:#fff;text-align:center}
+.ba-sublabel{font-size:.8rem;color:rgba(255,255,255,.7);letter-spacing:.08em;text-transform:uppercase}
+.ba-after .ba-label{color:var(--charcoal)}
+.ba-after .ba-sublabel{color:var(--text-light)}
+
+/* NEWSLETTER */
+.newsletter-bg{background:var(--cream)}
+.newsletter-wrap{max-width:640px;margin:0 auto;text-align:center}
+.newsletter-form{display:flex;gap:0;margin-top:2rem;max-width:480px;margin-left:auto;margin-right:auto}
+.newsletter-input{flex:1;border:1.5px solid var(--border);background:#fff;padding:.75rem 1.25rem;font-family:var(--font-body);font-size:.9rem;color:var(--text);outline:none}
+.newsletter-input:focus{border-color:var(--gold)}
+.newsletter-btn{background:var(--gold);color:#fff;border:none;padding:.75rem 1.5rem;font-family:var(--font-body);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .3s}
+.newsletter-btn:hover{background:var(--gold-dark)}
+
+/* FOOTER */
+.footer{background:var(--charcoal);color:rgba(255,255,255,.7);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand .footer-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:#fff;display:block;margin-bottom:.75rem}
+.footer-brand .footer-logo span{color:var(--gold-light)}
+.footer-brand p{font-size:.85rem;line-height:1.8;max-width:280px}
+.footer-col h4{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;font-weight:600}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-socials{display:flex;gap:.75rem;margin-top:1.5rem}
+.social-btn{width:36px;height:36px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.6);cursor:pointer;transition:all .3s}
+.social-btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.4)}
+.payment-icons{display:flex;gap:.5rem;align-items:center}
+.payment-icon{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.25rem .6rem;font-size:.65rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.05em}
+
+/* ======= SHOP PAGE ======= */
+.shop-hero{background:var(--cream);padding:7rem 2rem 3rem;text-align:center;margin-top:72px}
+.shop-hero h1{font-family:var(--font-display);font-size:3rem;font-weight:400;color:var(--charcoal)}
+.shop-hero p{font-size:1rem;color:var(--text-light);margin-top:.5rem}
+.shop-layout{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:260px 1fr;gap:2.5rem;align-items:start}
+.shop-sidebar{background:#fff;border:1px solid var(--border);padding:1.5rem;position:sticky;top:92px}
+.sidebar-section{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--border)}
+.sidebar-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sidebar-section h3{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--charcoal);font-weight:600;margin-bottom:1rem}
+.sidebar-search{width:100%;border:1.5px solid var(--border);padding:.6rem .9rem;font-family:var(--font-body);font-size:.875rem;color:var(--text);outline:none}
+.sidebar-search:focus{border-color:var(--gold)}
+.filter-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.filter-item{display:flex;align-items:center;gap:.6rem;cursor:pointer;padding:.3rem 0;transition:color .2s}
+.filter-item:hover{color:var(--gold)}
+.filter-item input[type=checkbox]{accent-color:var(--gold);width:14px;height:14px}
+.filter-item label{font-size:.875rem;color:var(--text-light);cursor:pointer;flex:1}
+.filter-item span{font-size:.75rem;color:var(--text-light)}
+.price-range{display:flex;gap:.5rem;align-items:center}
+.price-range input{flex:1;border:1px solid var(--border);padding:.4rem .6rem;font-size:.8rem;font-family:var(--font-body);outline:none;width:80px}
+.price-range-sep{color:var(--text-light);font-size:.85rem}
+.shop-main{}
+.shop-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.shop-count{font-size:.875rem;color:var(--text-light)}
+.shop-sort{display:flex;align-items:center;gap:.5rem}
+.shop-sort label{font-size:.8rem;color:var(--text-light)}
+.sort-select{border:1.5px solid var(--border);padding:.4rem .8rem;font-family:var(--font-body);font-size:.875rem;color:var(--text);outline:none;cursor:pointer}
+.sort-select:focus{border-color:var(--gold)}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}
+.pagination{display:flex;justify-content:center;gap:.5rem;margin-top:3rem}
+.page-btn{width:40px;height:40px;border:1.5px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.875rem;cursor:pointer;transition:all .3s;font-family:var(--font-body)}
+.page-btn:hover,.page-btn.active{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+
+/* ======= PRODUCT DETAIL ======= */
+.product-detail{max-width:1280px;margin:0 auto;padding:6rem 2rem 4rem;margin-top:72px}
+.pd-breadcrumb{font-size:.8rem;color:var(--text-light);margin-bottom:2rem}
+.pd-breadcrumb a{color:var(--gold);text-decoration:none}
+.pd-breadcrumb a:hover{text-decoration:underline}
+.pd-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem}
+.pd-gallery{}
+.pd-main-img{height:480px;background:linear-gradient(135deg,var(--cream),var(--cream-dark));display:flex;align-items:center;justify-content:center;border:1px solid var(--border);margin-bottom:1rem;position:relative;overflow:hidden}
+.pd-main-img-inner{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pd-main-img img{width:100%;height:100%;object-fit:contain;display:block}
+.pd-thumbs{display:flex;gap:.75rem}
+.pd-thumb{width:80px;height:80px;background:var(--cream);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:1.5rem;overflow:hidden}
+.pd-thumb:hover,.pd-thumb.active{border-color:var(--gold)}
+.pd-info{}
+.pd-category{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.pd-title{font-family:var(--font-display);font-size:2.25rem;font-weight:400;color:var(--charcoal);margin-bottom:.75rem;line-height:1.2}
+.pd-rating{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.pd-stars{color:var(--gold);font-size:1rem}
+.pd-review-count{font-size:.875rem;color:var(--text-light)}
+.pd-price{font-size:2rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem}
+.pd-price .old-price{font-size:1.25rem;color:var(--text-light);text-decoration:line-through;font-weight:400;margin-left:.75rem}
+.pd-short-desc{font-size:.95rem;color:var(--text-light);line-height:1.8;margin-bottom:1.5rem;font-weight:300}
+.pd-options{margin-bottom:1.5rem}
+.pd-options label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--charcoal);display:block;margin-bottom:.6rem}
+.pd-size-btns{display:flex;gap:.5rem;flex-wrap:wrap}
+.size-btn{border:1.5px solid var(--border);background:#fff;padding:.4rem .9rem;font-size:.85rem;cursor:pointer;transition:all .2s;font-family:var(--font-body)}
+.size-btn:hover,.size-btn.active{border-color:var(--charcoal);background:var(--charcoal);color:#fff}
+.pd-qty{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.pd-qty label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--charcoal)}
+.qty-control{display:flex;align-items:center;border:1.5px solid var(--border)}
+.qty-btn{width:36px;height:36px;background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--text);transition:background .2s;display:flex;align-items:center;justify-content:center}
+.qty-btn:hover{background:var(--cream)}
+.qty-num{width:48px;height:36px;text-align:center;border:none;border-left:1.5px solid var(--border);border-right:1.5px solid var(--border);font-family:var(--font-body);font-size:.95rem;color:var(--text);outline:none}
+.pd-btns{display:flex;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.pd-btns .btn-primary,.pd-btns .btn-outline{flex:1}
+.pd-features{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
+.pd-feature-tag{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--green);font-weight:500}
+.pd-feature-tag svg{width:14px;height:14px}
+.pd-tabs{margin-top:3rem}
+.pd-tab-btns{display:flex;gap:0;border-bottom:1.5px solid var(--border)}
+.pd-tab-btn{background:none;border:none;padding:.75rem 1.5rem;font-family:var(--font-body);font-size:.875rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;text-transform:uppercase;letter-spacing:.08em}
+.pd-tab-btn.active,.pd-tab-btn:hover{color:var(--charcoal)}
+.pd-tab-btn.active{border-bottom-color:var(--gold)}
+.pd-tab-content{padding:2rem 0;display:none}
+.pd-tab-content.active{display:block}
+.pd-tab-content p{font-size:.95rem;color:var(--text-light);line-height:1.8;margin-bottom:1rem;font-weight:300}
+.ingredients-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.ingredient-tag{background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500}
+.reviews-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:1rem}
+.review-item{border:1px solid var(--border);padding:1.25rem}
+.review-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:.6rem}
+.review-name{font-weight:500;font-size:.9rem;color:var(--charcoal)}
+.review-date{font-size:.78rem;color:var(--text-light)}
+.review-stars{color:var(--gold);font-size:.85rem;margin-bottom:.4rem}
+.review-text{font-size:.875rem;color:var(--text-light);line-height:1.7}
+.related-title{font-family:var(--font-display);font-size:1.75rem;font-weight:400;color:var(--charcoal);margin-bottom:2rem}
+.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+
+/* ======= CART ======= */
+.cart-page{max-width:1280px;margin:0 auto;padding:6rem 2rem 4rem;margin-top:72px}
+.cart-title{font-family:var(--font-display);font-size:2.5rem;font-weight:400;color:var(--charcoal);margin-bottom:2.5rem}
+.cart-layout{display:grid;grid-template-columns:1fr 360px;gap:2.5rem;align-items:start}
+.cart-items{}
+.cart-header-row{display:grid;grid-template-columns:3fr 1fr 1fr 1fr auto;gap:1rem;padding:.6rem 0;border-bottom:1.5px solid var(--border);margin-bottom:1rem}
+.cart-header-row span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light);font-weight:600}
+.cart-item{display:grid;grid-template-columns:3fr 1fr 1fr 1fr auto;gap:1rem;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.cart-item-info{display:flex;align-items:center;gap:1rem}
+.cart-item-img{width:72px;height:72px;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.cart-item-img img{width:100%;height:100%;object-fit:contain;display:block}
+.cart-item-name{font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--charcoal);margin-bottom:.2rem}
+.cart-item-variant{font-size:.78rem;color:var(--text-light)}
+.cart-item-price,.cart-item-total{font-size:.95rem;font-weight:600;color:var(--charcoal)}
+.cart-remove{background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;padding:.3rem;transition:color .2s}
+.cart-remove:hover{color:#e74c3c}
+.coupon-row{display:flex;gap:.75rem;margin-top:1.5rem}
+.coupon-input{flex:1;border:1.5px solid var(--border);padding:.65rem 1rem;font-family:var(--font-body);font-size:.875rem;color:var(--text);outline:none}
+.coupon-input:focus{border-color:var(--gold)}
+.cart-summary{background:var(--cream);border:1px solid var(--border);padding:1.5rem;position:sticky;top:92px}
+.cart-summary h3{font-family:var(--font-display);font-size:1.4rem;font-weight:500;color:var(--charcoal);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.summary-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;font-size:.9rem}
+.summary-row.total{border-top:1.5px solid var(--border);padding-top:1rem;margin-top:.5rem;font-size:1.1rem;font-weight:600;color:var(--charcoal)}
+.summary-label{color:var(--text-light)}
+.shipping-calc{margin:.75rem 0;font-size:.8rem}
+.shipping-calc a{color:var(--gold);cursor:pointer;text-decoration:none}
+
+/* ======= CHECKOUT ======= */
+.checkout-page{max-width:1280px;margin:0 auto;padding:6rem 2rem 4rem;margin-top:72px}
+.checkout-title{font-family:var(--font-display);font-size:2.5rem;font-weight:400;color:var(--charcoal);margin-bottom:.5rem}
+.checkout-steps{display:flex;gap:0;margin-bottom:3rem;border-bottom:2px solid var(--border)}
+.checkout-step{padding:.75rem 1.5rem;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--text-light);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:.4rem}
+.checkout-step.active{color:var(--gold);border-bottom-color:var(--gold)}
+.checkout-step.done{color:var(--green)}
+.checkout-layout{display:grid;grid-template-columns:1fr 380px;gap:2.5rem;align-items:start}
+.checkout-form{}
+.form-section{margin-bottom:2rem}
+.form-section h3{font-family:var(--font-display);font-size:1.3rem;font-weight:500;color:var(--charcoal);margin-bottom:1.25rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.form-group label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--charcoal)}
+.form-input,.form-select{border:1.5px solid var(--border);padding:.65rem 1rem;font-family:var(--font-body);font-size:.9rem;color:var(--text);outline:none;background:#fff;width:100%}
+.form-input:focus,.form-select:focus{border-color:var(--gold)}
+.payment-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.5rem}
+.payment-method{border:1.5px solid var(--border);padding:1rem;text-align:center;cursor:pointer;transition:all .2s;position:relative}
+.payment-method.active{border-color:var(--gold);background:var(--cream)}
+.payment-method-label{font-size:.78rem;color:var(--text-light);margin-top:.3rem;font-weight:500}
+.order-summary-checkout{}
+.order-summary-checkout h3{font-family:var(--font-display);font-size:1.4rem;font-weight:500;color:var(--charcoal);margin-bottom:1.25rem}
+.order-item{display:flex;align-items:center;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.order-item-img{width:56px;height:56px;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+.order-item-img img{width:100%;height:100%;object-fit:contain;display:block}
+.order-item-qty{position:absolute;top:-6px;right:-6px;background:var(--charcoal);color:#fff;width:18px;height:18px;border-radius:50%;font-size:.65rem;display:flex;align-items:center;justify-content:center}
+.order-item-name{font-size:.875rem;font-weight:500;color:var(--charcoal);flex:1}
+.order-item-price{font-size:.9rem;font-weight:600;color:var(--charcoal)}
+
+/* ======= ACCOUNT ======= */
+.account-page{max-width:560px;margin:0 auto;padding:7rem 2rem 4rem;margin-top:72px}
+.auth-card{background:#fff;border:1px solid var(--border);padding:2.5rem}
+.auth-card h2{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--charcoal);margin-bottom:.25rem}
+.auth-card p{font-size:.875rem;color:var(--text-light);margin-bottom:2rem}
+.auth-tabs{display:flex;gap:0;margin-bottom:2rem;border-bottom:1.5px solid var(--border)}
+.auth-tab{background:none;border:none;padding:.6rem 1.5rem;font-family:var(--font-body);font-size:.875rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.auth-tab.active{color:var(--charcoal);border-bottom-color:var(--gold)}
+.auth-social{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.5rem}
+.social-auth-btn{border:1.5px solid var(--border);background:#fff;padding:.7rem 1rem;font-family:var(--font-body);font-size:.875rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.75rem;transition:all .2s;width:100%;font-weight:500}
+.social-auth-btn:hover{border-color:var(--charcoal);background:var(--cream)}
+.auth-divider{text-align:center;position:relative;margin:1.5rem 0}
+.auth-divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border)}
+.auth-divider span{background:#fff;padding:0 1rem;font-size:.78rem;color:var(--text-light);position:relative;z-index:1;text-transform:uppercase;letter-spacing:.1em}
+.forgot-link{font-size:.8rem;color:var(--gold);text-decoration:none;text-align:right;display:block;margin-top:.4rem}
+.forgot-link:hover{text-decoration:underline}
+
+/* ======= ADMIN ======= */
+.admin-layout{display:flex;min-height:100vh;margin-top:72px}
+.admin-sidebar{width:240px;background:var(--charcoal);padding:1.5rem 0;flex-shrink:0;position:sticky;top:72px;height:calc(100vh - 72px);overflow-y:auto}
+.admin-nav-group{margin-bottom:2rem}
+.admin-nav-group-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);padding:.5rem 1.5rem;font-weight:600}
+.admin-nav-item{display:flex;align-items:center;gap:.75rem;padding:.65rem 1.5rem;font-size:.875rem;color:rgba(255,255,255,.6);cursor:pointer;transition:all .2s;text-decoration:none}
+.admin-nav-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.admin-nav-item.active{background:rgba(184,150,106,.15);color:var(--gold-light);border-left:2px solid var(--gold)}
+.admin-nav-item .nav-icon{font-size:1rem;width:18px}
+.admin-main{flex:1;padding:2rem;background:var(--cream);overflow-x:hidden}
+.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.admin-header h1{font-family:var(--font-display);font-size:1.75rem;font-weight:500;color:var(--charcoal)}
+.admin-header p{font-size:.875rem;color:var(--text-light);margin-top:.2rem}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+.metric-card{background:#fff;border:1px solid var(--border);padding:1.25rem 1.5rem}
+.metric-label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.25rem}
+.metric-value{font-family:var(--font-display);font-size:2rem;font-weight:600;color:var(--charcoal)}
+.metric-change{font-size:.8rem;margin-top:.2rem;display:flex;align-items:center;gap:.25rem}
+.metric-up{color:var(--green)}
+.metric-down{color:#e74c3c}
+.admin-grid-2{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.admin-card{background:#fff;border:1px solid var(--border);padding:1.5rem}
+.admin-card h3{font-size:.875rem;font-weight:600;color:var(--charcoal);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.admin-card h3 a{font-size:.75rem;color:var(--gold);text-decoration:none;font-weight:500;letter-spacing:.04em;text-transform:none}
+.admin-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.admin-table th{text-align:left;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light);font-weight:600;padding:.5rem .75rem;border-bottom:1.5px solid var(--border)}
+.admin-table td{padding:.75rem;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-table tr:hover td{background:var(--cream)}
+.status-badge{display:inline-flex;align-items:center;font-size:.7rem;font-weight:600;padding:.2rem .6rem;letter-spacing:.05em;text-transform:uppercase}
+.status-delivered{background:#EAF0E8;color:var(--green)}
+.status-pending{background:#FAF0E0;color:#8A6010}
+.status-processing{background:#E6EEF8;color:#2952A3}
+.status-cancelled{background:#FCEAEA;color:#A32020}
+.chart-area{height:160px;display:flex;align-items:flex-end;gap:3px;padding:0 .5rem}
+.chart-bar{flex:1;background:var(--gold-light);border-radius:2px 2px 0 0;transition:all .3s;position:relative;cursor:pointer;min-height:4px}
+.chart-bar:hover{background:var(--gold)}
+.chart-bar .tooltip{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--charcoal);color:#fff;font-size:.65rem;padding:.2rem .5rem;white-space:nowrap;opacity:0;transition:opacity .2s;pointer-events:none}
+.chart-bar:hover .tooltip{opacity:1}
+.chart-labels{display:flex;gap:3px;padding:0 .5rem;margin-top:.25rem}
+.chart-label{flex:1;text-align:center;font-size:.65rem;color:var(--text-light)}
+.top-product{display:flex;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border)}
+.top-product:last-child{border-bottom:none}
+.top-product-rank{width:20px;font-size:.75rem;font-weight:700;color:var(--text-light)}
+.top-product-info{flex:1}
+.top-product-name{font-size:.875rem;font-weight:500;color:var(--charcoal)}
+.top-product-sales{font-size:.75rem;color:var(--text-light)}
+.top-product-rev{font-size:.875rem;font-weight:600;color:var(--charcoal)}
+.inventory-bar{height:6px;background:var(--cream-dark);border-radius:3px;margin-top:.3rem;overflow:hidden}
+.inventory-fill{height:100%;border-radius:3px;transition:width .5s}
+.fill-high{background:var(--green)}
+.fill-med{background:var(--gold)}
+.fill-low{background:#e74c3c}
+
+/* SVG BOTTLE */
+.bottle-svg{display:block}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+.anim-fade{animation:fadeInUp .6s ease both}
+.anim-fade-2{animation:fadeInUp .6s .15s ease both}
+.anim-fade-3{animation:fadeInUp .6s .3s ease both}
+.bottle-float{animation:float 4s ease-in-out infinite}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--charcoal);color:#fff;padding:.75rem 1.5rem;font-size:.875rem;z-index:9999;transform:translateX(120%);transition:transform .3s;display:flex;align-items:center;gap:.5rem;max-width:320px}
+.toast.show{transform:translateX(0)}
+.toast span{color:var(--gold-light)}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(44,36,32,.6);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.show{opacity:1;pointer-events:all}
+.modal{background:#fff;padding:2.5rem;max-width:560px;width:100%;position:relative;transform:translateY(20px);transition:transform .3s}
+.modal-overlay.show .modal{transform:translateY(0)}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;cursor:pointer;font-size:1.25rem;color:var(--text-light);transition:color .2s}
+.modal-close:hover{color:var(--charcoal)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero-content{grid-template-columns:1fr;padding-top:5rem}
+.hero-visual{display:none}
+.footer-grid{grid-template-columns:1fr 1fr}
+.pd-layout{grid-template-columns:1fr}
+.cart-layout{grid-template-columns:1fr}
+.checkout-layout{grid-template-columns:1fr}
+.admin-layout{flex-direction:column}
+.admin-sidebar{width:100%;height:auto;position:relative;top:0;padding:1rem 0}
+.shop-layout{grid-template-columns:1fr}
+.shop-sidebar{position:relative;top:0}
+.related-grid{grid-template-columns:repeat(2,1fr)}
+.admin-grid-2{grid-template-columns:1fr}
+.cart-header-row{display:none}
+.cart-item{grid-template-columns:1fr auto}
+.cart-item-price,.cart-item-total{display:none}
+}
+@media(max-width:600px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.hero-btns{flex-direction:column}
+.form-row{grid-template-columns:1fr}
+.payment-methods{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:1fr}
+.related-grid{grid-template-columns:repeat(2,1fr)}
+.metrics-grid{grid-template-columns:1fr 1fr}
+.nav-inner{padding:0 1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="showPage('home');return false">
+      Natural <span>Silk</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home');return false" class="active" id="nav-home">Home</a></li>
+      <li><a href="#" onclick="showPage('shop');return false" id="nav-shop">Shop</a></li>
+      <li><a href="#" onclick="showPage('product');return false" id="nav-product">Products</a></li>
+      <li><a href="#" onclick="showPage('about-section');return false">About</a></li>
+      <li><a href="#" onclick="showPage('account');return false" id="nav-account">Account</a></li>
+      <li><a href="#" onclick="showPage('admin');return false" id="nav-admin" style="color:var(--gold)">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="showPage('shop')" aria-label="Search">🔍</button>
+      <button class="nav-btn" onclick="showPage('account')" aria-label="Account">👤</button>
+      <button class="nav-btn" onclick="showPage('cart')" style="position:relative" aria-label="Cart">
+        🛒<span class="cart-badge" id="cartBadge">3</span>
+      </button>
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span>✓</span> <span id="toastMsg">Added to cart!</span></div>
+
+<!-- MODAL - QUICK VIEW -->
+<div class="modal-overlay" id="quickModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="quickModalContent"></div>
+  </div>
+</div>
+
+<!-- ========== HOME PAGE ========== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-text anim-fade">
+        <div class="hero-badge">✨ Premium Hair Care</div>
+        <h1 class="hero-h1">Transform Your Hair with <em>Natural Silk</em> Shampoo</h1>
+        <p class="hero-sub">Experience deep nourishment, natural shine, and healthier hair with our premium silk protein formula. Crafted with nature's finest ingredients.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('shop')">Shop Now →</button>
+          <button class="btn-outline" onclick="scrollToSection('benefits')">Learn More</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="hero-stat-num">50K+</div><div class="hero-stat-label">Happy Customers</div></div>
+          <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-label">Satisfaction Rate</div></div>
+          <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Natural Ingredients</div></div>
+        </div>
+      </div>
+      <div class="hero-visual anim-fade-2">
+        <div class="hero-img-wrap">
+          <div class="hero-circle-bg"></div>
+           <div class="hero-img-placeholder">
+             <img src="list1.png" alt="Natural Silk Daily Shampoo" class="hero-bottle-svg bottle-float">
+           </div>
+          <div class="hero-floating-badge hero-floating-1">
+            <div class="hero-floating-icon">🌿</div>
+            <div class="hero-floating-text"><div class="label">Formula</div><div class="value">100% Natural</div></div>
+          </div>
+          <div class="hero-floating-badge hero-floating-2">
+            <div class="hero-floating-icon">⭐</div>
+            <div class="hero-floating-text"><div class="label">Customer Rating</div><div class="value">4.9 / 5.0</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section" id="benefits">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Why Natural Silk</span>
+        <h2 class="section-title">The Science of <em>Beautiful Hair</em></h2>
+        <p class="section-sub">Our advanced silk protein formula works at the cellular level to repair, nourish, and transform your hair.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card"><div class="benefit-icon">🧬</div><div class="benefit-name">Silk Protein Formula</div><div class="benefit-desc">Hydrolyzed silk proteins penetrate deep into each strand for lasting repair</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🚫</div><div class="benefit-name">Sulfate-Free</div><div class="benefit-desc">Gentle cleansing without harsh sulfates that strip natural oils</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🌿</div><div class="benefit-name">Natural Ingredients</div><div class="benefit-desc">Botanically derived, ethically sourced ingredients from around the world</div></div>
+        <div class="benefit-card"><div class="benefit-icon">💆</div><div class="benefit-name">Deep Hair Repair</div><div class="benefit-desc">Restores damaged hair structure for visibly healthier, stronger strands</div></div>
+        <div class="benefit-card"><div class="benefit-icon">✨</div><div class="benefit-name">Long-Lasting Shine</div><div class="benefit-desc">Mirror-like shine that lasts all day with our unique light-reflecting complex</div></div>
+        <div class="benefit-card"><div class="benefit-icon">💫</div><div class="benefit-name">All Hair Types</div><div class="benefit-desc">Specially formulated to work beautifully on all textures and hair types</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="section products-bg">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Best Sellers</span>
+        <h2 class="section-title">Our Most <em>Loved Products</em></h2>
+        <p class="section-sub">Discover the collection that has transformed millions of hair care routines worldwide.</p>
+      </div>
+      <div class="products-grid" id="homeProducts"></div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <button class="btn-outline" onclick="showPage('shop')">View All Products →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Our Promise</span>
+        <h2 class="section-title">Why Choose <em>Natural Silk</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><div class="why-icon">🌱</div><div class="why-label">Natural Ingredients</div><div class="why-desc">Pure botanical extracts, no harmful chemicals</div></div>
+        <div class="why-item"><div class="why-icon">👩‍⚕️</div><div class="why-label">Dermatologist Tested</div><div class="why-desc">Clinically proven safe for all skin types</div></div>
+        <div class="why-item"><div class="why-icon">🐰</div><div class="why-label">Cruelty Free</div><div class="why-desc">Certified by PETA & Leaping Bunny</div></div>
+        <div class="why-item"><div class="why-icon">♻️</div><div class="why-label">Eco-Friendly</div><div class="why-desc">100% recyclable sustainable packaging</div></div>
+        <div class="why-item"><div class="why-icon">✈️</div><div class="why-label">Worldwide Shipping</div><div class="why-desc">Fast delivery to over 120 countries</div></div>
+        <div class="why-item"><div class="why-icon">🏆</div><div class="why-label">Premium Quality</div><div class="why-desc">Award-winning formulas since 2018</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-bg">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Testimonials</span>
+        <h2 class="section-title">What Our Customers <em>Say</em></h2>
+        <p class="section-sub">Real stories from real people who transformed their hair with Natural Silk.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"My hair became softer and shinier after only two weeks of use. I can't imagine going back to my old shampoo. This is pure magic in a bottle!"</p>
+          <div class="t-author"><div class="t-avatar" style="background:#D4B896">SC</div><div><div class="t-name">Sofia Chen</div><div class="t-role">Hair Stylist, Singapore</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"After years of struggling with damaged, frizzy hair, Natural Silk completely transformed my routine. The silk protein formula is absolutely incredible."</p>
+          <div class="t-author"><div class="t-avatar" style="background:#9FE1CB">MR</div><div><div class="t-name">Maya Rodriguez</div><div class="t-role">Beauty Blogger, Miami</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"As a professional stylist, I recommend Natural Silk to all my clients. The results speak for themselves — every client leaves with gorgeous, healthy hair."</p>
+          <div class="t-author"><div class="t-avatar" style="background:#F4C0D1">LK</div><div><div class="t-name">Laura Kim</div><div class="t-role">Senior Colorist, Seoul</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"The anti-hair fall formula has genuinely reduced my shedding by what feels like 70%. My confidence has completely returned. Thank you Natural Silk!"</p>
+          <div class="t-author"><div class="t-avatar" style="background:#C8E6D5">AP</div><div><div class="t-name">Aisha Patel</div><div class="t-role">Doctor, London</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"I tried every luxury brand out there. Nothing compares to Natural Silk. The scent alone is worth the price — like walking through a silk garden."</p>
+          <div class="t-author"><div class="t-avatar" style="background:#FAC775">JW</div><div><div class="t-name">Jessica Wu</div><div class="t-role">Influencer, 2.1M followers</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Tried the keratin version on my thick curly hair and oh my goodness. The frizz is GONE. My curls have never looked so defined and moisturized."</p>
+          <div class="t-author"><div class="t-avatar" style="background:#B5D4F4">TN</div><div><div class="t-name">Tanya Nkosi</div><div class="t-role">Model, Johannesburg</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Real Results</span>
+        <h2 class="section-title">See the <em>Transformation</em></h2>
+        <p class="section-sub">Drag the slider to reveal the before & after results. Results visible in as little as 2 weeks.</p>
+      </div>
+      <div class="ba-wrap">
+        <div class="ba-slider" id="baSlider">
+          <div class="ba-before" id="baBefore" style="clip-path:inset(0 50% 0 0)">
+            <div class="ba-label">Before</div>
+            <div class="ba-sublabel">Dry · Damaged · Frizzy</div>
+            <div style="font-size:3rem;margin-top:1rem">😞</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:.5rem;text-align:center;padding:0 2rem">Dull, brittle hair prone to breakage and split ends</div>
+          </div>
+          <div class="ba-after">
+            <div class="ba-label">After 2 Weeks</div>
+            <div class="ba-sublabel">Silky · Shiny · Healthy</div>
+            <div style="font-size:3rem;margin-top:1rem">✨</div>
+            <div style="font-size:.8rem;color:var(--text-light);margin-top:.5rem;text-align:center;padding:0 2rem">Lustrous, strong hair full of life and natural shine</div>
+          </div>
+          <div class="ba-divider" id="baDivider"></div>
+          <div class="ba-handle" id="baHandle">⟷</div>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem;font-size:.85rem;color:var(--text-light)">← Drag to compare →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter-bg">
+    <div class="section-inner">
+      <div class="newsletter-wrap">
+        <span class="section-eyebrow">Exclusive Offers</span>
+        <h2 class="section-title">Get 15% Off <em>Your First Order</em></h2>
+        <p class="section-sub" style="max-width:100%">Join our community and receive exclusive discounts, beauty tips, and early access to new products.</p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address">
+          <button class="newsletter-btn" onclick="showToast('You\'re subscribed! Check your email for your 15% code.')">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Natural <span>Silk</span></span>
+          <p>Premium hair care rooted in nature's wisdom. Our silk protein formulas have transformed millions of hair care routines worldwide since 2018.</p>
+          <div class="footer-socials">
+            <div class="social-btn">f</div>
+            <div class="social-btn">📷</div>
+            <div class="social-btn">▶</div>
+            <div class="social-btn">in</div>
+            <div class="social-btn">𝕏</div>
+          </div>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="#">Daily Shampoo</a></li>
+            <li><a href="#">Repair Shampoo</a></li>
+            <li><a href="#">Anti-Hair Fall</a></li>
+            <li><a href="#">Moisturizing</a></li>
+            <li><a href="#">Keratin Series</a></li>
+            <li><a href="#">Conditioners</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('account')">My Account</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Natural Silk Shampoo. All rights reserved. | Privacy Policy | Terms of Service</p>
+        <div class="payment-icons">
+          <div class="payment-icon">VISA</div>
+          <div class="payment-icon">MC</div>
+          <div class="payment-icon">PayPal</div>
+          <div class="payment-icon">Apple Pay</div>
+          <div class="payment-icon">ABA</div>
+          <div class="payment-icon">ACLEDA</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div><!-- end home page -->
+
+<!-- ========== ABOUT SECTION PAGE ========== -->
+<div class="page" id="page-about-section">
+  <div class="section" style="padding:6rem 2rem 4rem;">
+    <div class="section-inner">
+      <div class="section-header" style="text-align:center;margin-bottom:5rem;">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="section-title">Meet the <em>Team Behind Natural Silk</em></h2>
+        <p class="section-sub" style="max-width:600px;margin:0 auto 2rem;font-size:1.1rem;color:var(--text-light);line-height:1.8;">
+          At Natural Silk, we believe that beautiful hair starts with passionate people. Our team combines decades of expertise in hair care, science, and natural ingredients to create products that transform hair from the inside out.
+        </p>
+      </div>
+      
+      <div class="team-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:3rem;margin-bottom:4rem;">
+        <!-- CEO -->
+        <div class="team-member" style="text-align:center;background:var(--cream);border-radius:16px;padding:2.5rem;transition:all .3s;border:1px solid var(--border);">
+          <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1.5rem;border:3px solid var(--gold);">
+            <img src="CEO.png" alt="CEO - Natural Silk" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Somoun Kea</h3>
+          <p style="font-size:1rem;color:var(--gold);font-weight:600;margin-bottom:1.5rem;">Chief Executive Officer</p>
+          <p style="font-size:.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;">
+            With 15 years of leadership in the beauty industry, Alexandra drives our vision of combining luxury with accessibility. Her passion for sustainable beauty practices has shaped Natural Silk into an eco-conscious leader.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Leadership</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Sustainability</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Innovation</span>
+          </div>
+        </div>
+        
+        <!-- Founder -->
+        <div class="team-member" style="text-align:center;background:var(--cream);border-radius:16px;padding:2.5rem;transition:all .3s;border:1px solid var(--border);">
+          <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1.5rem;border:3px solid var(--gold);">
+            <img src="founder.png" alt="Founder - Natural Silk" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Seng Chanrathana</h3>
+          <p style="font-size:1rem;color:var(--gold);font-weight:600;margin-bottom:1.5rem;">Founder & Chief Scientist</p>
+          <p style="font-size:.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;">
+            Ratana founded Natural Silk in 2018 after discovering the transformative power of silk proteins during his research at a leading dermatology institute. His scientific breakthroughs form the foundation of our patented formulas.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Science</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Research</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Formulation</span>
+          </div>
+        </div>
+        
+        <!-- Founder 1 -->
+        <div class="team-member" style="text-align:center;background:var(--cream);border-radius:16px;padding:2.5rem;transition:all .3s;border:1px solid var(--border);">
+          <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1.5rem;border:3px solid var(--gold);">
+            <img src="founder1.png" alt="Creative Director - Natural Silk" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Chantrea Ny</h3>
+          <p style="font-size:1rem;color:var(--gold);font-weight:600;margin-bottom:1.5rem;">Founder & Creative Director</p>
+          <p style="font-size:.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;">
+            Sophie brings our brand to life through thoughtful design and storytelling. Her background in luxury fashion and natural beauty ensures every aspect of Natural Silk reflects elegance and authenticity.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Design</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Branding</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Storytelling</span>
+          </div>
+        </div>
+        
+        <!-- Founder 2 -->
+        <div class="team-member" style="text-align:center;background:var(--cream);border-radius:16px;padding:2.5rem;transition:all .3s;border:1px solid var(--border);">
+          <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1.5rem;border:3px solid var(--gold);">
+            <img src="founder2.png" alt="Product Development Lead - Natural Silk" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Chantha Lorn </h3>
+          <p style="font-size:1rem;color:var(--gold);font-weight:600;margin-bottom:1.5rem;">Founder & Product Development Lead</p>
+          <p style="font-size:.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;">
+            Marcus oversees the creation of our product line, ensuring each formula meets our uncompromising standards for efficacy, safety, and sensory experience. His expertise in natural ingredients is evident in every bottle.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Development</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Ingredients</span>
+            <span style="background:var(--green-pale);color:var(--green);font-size:.78rem;padding:.3rem .7rem;font-weight:500;border-radius:20px;">Quality</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Our Values Section -->
+      <div class="section" style="background:var(--cream-dark);border-radius:16px;padding:4rem 2rem;">
+        <div class="section-inner">
+          <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+            <span class="section-eyebrow">Our Values</span>
+            <h2 class="section-title">What <em>Drives Us</em></h2>
+          </div>
+          <div class="values-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center;">
+            <div class="value-item">
+              <div style="font-size:2.5rem;margin-bottom:1rem;color:var(--gold);">🌿</div>
+              <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Natural Excellence</h3>
+              <p style="font-size:.9rem;color:var(--text-light);line-height:1.6;">We source only the finest natural ingredients, ethically and sustainably.</p>
+            </div>
+            <div class="value-item">
+              <div style="font-size:2.5rem;margin-bottom:1rem;color:var(--gold);">🔬</div>
+              <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Scientific Rigor</h3>
+              <p style="font-size:.9rem;color:var(--text-light);line-height:1.6;">Every formula is backed by research and clinically tested for real results.</p>
+            </div>
+            <div class="value-item">
+              <div style="font-size:2.5rem;margin-bottom:1rem;color:var(--gold);">💖</div>
+              <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Hair-First Philosophy</h3>
+              <p style="font-size:.9rem;color:var(--text-light);line-height:1.6;">We prioritize hair health over shortcuts, creating products that nurture long-term vitality.</p>
+            </div>
+            <div class="value-item">
+              <div style="font-size:2.5rem;margin-bottom:1rem;color:var(--gold);">♻️</div>
+              <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem;">Eco Consciousness</h3>
+              <p style="font-size:.9rem;color:var(--text-light);line-height:1.6;">From ingredients to packaging, we minimize our environmental footprint.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SHOP PAGE ========== -->
+<div class="page" id="page-shop">
+  <div class="shop-hero">
+    <h1>Our Collection</h1>
+    <p>Discover the full range of Natural Silk premium hair care products</p>
+  </div>
+  <div class="shop-layout">
+    <aside class="shop-sidebar">
+      <div class="sidebar-section">
+        <h3>Search</h3>
+        <input type="text" class="sidebar-search" placeholder="Search products..." id="shopSearch" oninput="filterShop()">
+      </div>
+      <div class="sidebar-section">
+        <h3>Category</h3>
+        <ul class="filter-list">
+          <li class="filter-item"><input type="checkbox" id="f-shampoo" checked onchange="filterShop()"><label for="f-shampoo">Shampoo</label><span>(5)</span></li>
+          <li class="filter-item"><input type="checkbox" id="f-conditioner" onchange="filterShop()"><label for="f-conditioner">Conditioner</label><span>(3)</span></li>
+          <li class="filter-item"><input type="checkbox" id="f-treatment" onchange="filterShop()"><label for="f-treatment">Treatment</label><span>(4)</span></li>
+          <li class="filter-item"><input type="checkbox" id="f-serum" onchange="filterShop()"><label for="f-serum">Serum</label><span>(2)</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Hair Type</h3>
+        <ul class="filter-list">
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>All Hair Types</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>Dry Hair</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>Oily Hair</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>Curly Hair</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>Color-Treated</label></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Price Range</h3>
+        <div class="price-range">
+          <input type="number" placeholder="$0" id="priceMin" onchange="filterShop()">
+          <span class="price-range-sep">—</span>
+          <input type="number" placeholder="$100" id="priceMax" onchange="filterShop()">
+        </div>
+        <button class="btn-gold" style="width:100%;margin-top:.75rem;padding:.5rem" onclick="filterShop()">Apply</button>
+      </div>
+      <div class="sidebar-section">
+        <h3>Rating</h3>
+        <ul class="filter-list">
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>⭐⭐⭐⭐⭐ 5 Stars</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>⭐⭐⭐⭐ 4+ Stars</label></li>
+          <li class="filter-item"><input type="checkbox" onchange="filterShop()"><label>⭐⭐⭐ 3+ Stars</label></li>
+        </ul>
+      </div>
+    </aside>
+    <div class="shop-main">
+      <div class="shop-toolbar">
+        <p class="shop-count" id="shopCount">Showing 5 products</p>
+        <div class="shop-sort">
+          <label>Sort by:</label>
+          <select class="sort-select" onchange="filterShop()">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Rating</option>
+            <option>Newest</option>
+          </select>
+        </div>
+      </div>
+      <div class="shop-grid" id="shopGrid"></div>
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PRODUCT DETAIL PAGE ========== -->
+<div class="page" id="page-product">
+  <div class="product-detail">
+    <div class="pd-breadcrumb">
+      <a href="#" onclick="showPage('home');return false">Home</a> / 
+      <a href="#" onclick="showPage('shop');return false">Shop</a> / 
+      <span>Natural Silk Daily Shampoo</span>
+    </div>
+    <div class="pd-layout">
+      <div class="pd-gallery">
+         <div class="pd-main-img">
+           <div class="pd-main-img-inner">
+             <img src="list1.png" alt="Natural Silk Daily Shampoo" class="pd-main-img">
+             <div style="font-size:.75rem;color:var(--text-light);margin-top:1rem;letter-spacing:.1em;text-transform:uppercase">Natural Silk Daily Shampoo</div>
+           </div>
+         </div>
+        <div class="pd-thumbs">
+          <div class="pd-thumb active">🧴</div>
+          <div class="pd-thumb">🌿</div>
+          <div class="pd-thumb">✨</div>
+          <div class="pd-thumb">💎</div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <div class="pd-category">Daily Care Collection</div>
+        <h1 class="pd-title">Natural Silk Daily Shampoo</h1>
+        <div class="pd-rating">
+          <div class="pd-stars">★★★★★</div>
+          <span class="pd-review-count">4.9 (248 reviews)</span>
+          <span style="color:var(--green);font-size:.8rem;font-weight:500">✓ In Stock</span>
+        </div>
+        <div class="pd-price">$28.00 <span class="old-price">$35.00</span></div>
+        <p class="pd-short-desc">Our signature daily shampoo infused with hydrolyzed silk proteins gently cleanses while deeply nourishing every strand. Sulfate-free, dermatologist tested, and suitable for all hair types.</p>
+        <div class="pd-options">
+          <label>Size</label>
+          <div class="pd-size-btns">
+            <button class="size-btn">150ml</button>
+            <button class="size-btn active">300ml</button>
+            <button class="size-btn">500ml</button>
+            <button class="size-btn">1L</button>
+          </div>
+        </div>
+        <div class="pd-qty">
+          <label>Qty:</label>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <input type="number" class="qty-num" value="1" min="1" id="pdQty">
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+        <div class="pd-btns">
+          <button class="btn-primary" onclick="showToast('Added to cart! 🛒')">Add to Cart</button>
+          <button class="btn-gold" onclick="showPage('checkout')">Buy Now</button>
+          <button class="btn-outline" style="flex:none;padding:.75rem">♡</button>
+        </div>
+        <div class="pd-features">
+          <span class="pd-feature-tag">✓ Sulfate-Free</span>
+          <span class="pd-feature-tag">✓ Paraben-Free</span>
+          <span class="pd-feature-tag">✓ Vegan</span>
+          <span class="pd-feature-tag">✓ Cruelty-Free</span>
+          <span class="pd-feature-tag">✓ Dermatologist Tested</span>
+          <span class="pd-feature-tag">✓ Eco-Friendly Packaging</span>
+        </div>
+        <div style="background:var(--cream);border:1px solid var(--border);padding:1rem;font-size:.85rem;color:var(--text-light);display:flex;gap:1.5rem;flex-wrap:wrap">
+          <span>🚚 Free shipping over $50</span>
+          <span>↩ 30-day returns</span>
+          <span>🔒 Secure checkout</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="pd-tabs">
+      <div class="pd-tab-btns">
+        <button class="pd-tab-btn active" onclick="switchTab(this,'tab-desc')">Description</button>
+        <button class="pd-tab-btn" onclick="switchTab(this,'tab-ingredients')">Ingredients</button>
+        <button class="pd-tab-btn" onclick="switchTab(this,'tab-usage')">How to Use</button>
+        <button class="pd-tab-btn" onclick="switchTab(this,'tab-reviews')">Reviews (248)</button>
+      </div>
+      <div class="pd-tab-content active" id="tab-desc">
+        <p>Natural Silk Daily Shampoo is the cornerstone of our luxury hair care collection. Formulated with patented Hydra-Silk Complex™ and enriched with pure botanical extracts, this daily cleanser gently removes impurities while infusing each strand with vital nutrients.</p>
+        <p>The unique blend of hydrolyzed silk proteins works at a molecular level to fill gaps in the hair cuticle, creating a smooth surface that reflects light for unparalleled shine. Unlike conventional shampoos, our sulfate-free formula preserves your hair's natural oils and color vibrancy.</p>
+        <p>Suitable for daily use on all hair types including color-treated, chemically processed, and naturally fine hair. Clinically proven to reduce breakage by 89% and increase shine by 3.2x in independent trials.</p>
+      </div>
+      <div class="pd-tab-content" id="tab-ingredients">
+        <p>We believe in full transparency. Every ingredient is ethically sourced, sustainably produced, and rigorously tested for safety and efficacy.</p>
+        <p><strong>Key Active Ingredients:</strong></p>
+        <div class="ingredients-list">
+          <span class="ingredient-tag">Hydrolyzed Silk Protein</span>
+          <span class="ingredient-tag">Argan Oil</span>
+          <span class="ingredient-tag">Keratin Complex</span>
+          <span class="ingredient-tag">Aloe Vera</span>
+          <span class="ingredient-tag">Green Tea Extract</span>
+          <span class="ingredient-tag">Biotin</span>
+          <span class="ingredient-tag">Vitamin E</span>
+          <span class="ingredient-tag">Provitamin B5</span>
+          <span class="ingredient-tag">Chamomile Extract</span>
+          <span class="ingredient-tag">Jojoba Oil</span>
+          <span class="ingredient-tag">Caffeine</span>
+          <span class="ingredient-tag">Hyaluronic Acid</span>
+        </div>
+        <p style="margin-top:1.5rem;font-size:.82rem;color:var(--text-light)">Free from: Sulfates · Parabens · Phthalates · Artificial Colors · Mineral Oil · Formaldehyde</p>
+      </div>
+      <div class="pd-tab-content" id="tab-usage">
+        <p>For best results, follow this simple routine:</p>
+        <p><strong>Step 1.</strong> Wet hair thoroughly with warm water. Warm water opens the cuticle for deeper penetration of silk proteins.</p>
+        <p><strong>Step 2.</strong> Apply a generous amount (about the size of a quarter for short hair, more for longer hair) to your palms and distribute evenly through hair from roots to tips.</p>
+        <p><strong>Step 3.</strong> Massage gently into the scalp using your fingertips in circular motions for 2–3 minutes. This stimulates circulation and maximizes silk protein absorption.</p>
+        <p><strong>Step 4.</strong> Leave on for 1–2 minutes for extra conditioning benefits.</p>
+        <p><strong>Step 5.</strong> Rinse thoroughly with cool water to seal the cuticle and lock in shine. For best results, follow with Natural Silk Conditioner.</p>
+      </div>
+      <div class="pd-tab-content" id="tab-reviews">
+        <div class="reviews-list">
+          <div class="review-item">
+            <div class="review-header"><div><div class="review-name">Sofia Chen</div><div class="review-stars">★★★★★</div></div><div class="review-date">March 15, 2025</div></div>
+            <p class="review-text">Absolutely incredible shampoo. My hair has never felt this soft and looked this shiny. I've been using it for a month and the difference is remarkable. The scent is also divine — not overpowering, just perfectly silky.</p>
+          </div>
+          <div class="review-item">
+            <div class="review-header"><div><div class="review-name">Maya Rodriguez</div><div class="review-stars">★★★★★</div></div><div class="review-date">February 28, 2025</div></div>
+            <p class="review-text">I have very dry, damaged hair from years of coloring. After two weeks of using this, my stylist couldn't believe how much healthier my hair looked. Highly recommend the 500ml bottle — great value for money!</p>
+          </div>
+          <div class="review-item">
+            <div class="review-header"><div><div class="review-name">David Park</div><div class="review-stars">★★★★☆</div></div><div class="review-date">January 10, 2025</div></div>
+            <p class="review-text">Great shampoo overall. My hair feels noticeably silkier and the lather is luxurious. Would give 5 stars but the 300ml bottle goes faster than expected for thick hair. Will definitely purchase the 1L next time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div style="margin-top:4rem">
+      <div class="related-title">You May Also <em style="color:var(--gold);font-family:var(--font-display)">Like</em></div>
+      <div class="related-grid" id="relatedProducts"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CART PAGE ========== -->
+<div class="page" id="page-cart">
+  <div class="cart-page">
+    <h1 class="cart-title">Your Shopping <em style="color:var(--gold);font-family:var(--font-display)">Cart</em></h1>
+    <div class="cart-layout">
+      <div class="cart-items">
+        <div class="cart-header-row">
+          <span>Product</span><span>Price</span><span>Qty</span><span>Total</span><span></span>
+        </div>
+        <div id="cartItemsList"></div>
+        <div class="coupon-row">
+          <input type="text" class="coupon-input" placeholder="Enter coupon code (try: SILK15)">
+          <button class="btn-outline" style="padding:.65rem 1.25rem" onclick="applyCoupon()">Apply</button>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:1.5rem;flex-wrap:wrap;gap:.75rem">
+          <button class="btn-outline" onclick="showPage('shop')">← Continue Shopping</button>
+          <button class="btn-primary" onclick="showPage('checkout')">Proceed to Checkout →</button>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span class="summary-label">Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="summary-row"><span class="summary-label">Discount</span><span id="cartDiscount" style="color:var(--green)">-$0.00</span></div>
+        <div class="summary-row"><span class="summary-label">Shipping</span><span id="cartShipping">$5.99</span></div>
+        <div class="summary-row"><span class="summary-label">Tax (10%)</span><span id="cartTax">$0.00</span></div>
+        <div class="summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <div class="shipping-calc"><a onclick="showToast('Calculating shipping to your location...')">Calculate shipping</a></div>
+        <button class="btn-primary" style="width:100%;margin-top:1rem" onclick="showPage('checkout')">Checkout →</button>
+        <div style="margin-top:1rem;text-align:center">
+          <div style="font-size:.75rem;color:var(--text-light);margin-bottom:.5rem">Secure Payment via</div>
+          <div style="display:flex;gap:.4rem;justify-content:center;flex-wrap:wrap">
+            <span style="background:var(--cream);border:1px solid var(--border);padding:.2rem .5rem;font-size:.65rem;font-weight:700">VISA</span>
+            <span style="background:var(--cream);border:1px solid var(--border);padding:.2rem .5rem;font-size:.65rem;font-weight:700">MC</span>
+            <span style="background:var(--cream);border:1px solid var(--border);padding:.2rem .5rem;font-size:.65rem;font-weight:700">PayPal</span>
+            <span style="background:var(--cream);border:1px solid var(--border);padding:.2rem .5rem;font-size:.65rem;font-weight:700">ABA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CHECKOUT PAGE ========== -->
+<div class="page" id="page-checkout">
+  <div class="checkout-page">
+    <h1 class="checkout-title">Checkout</h1>
+    <div class="checkout-steps">
+      <div class="checkout-step done">✓ Cart</div>
+      <div class="checkout-step active">📦 Shipping</div>
+      <div class="checkout-step">💳 Payment</div>
+      <div class="checkout-step">✅ Confirm</div>
+    </div>
+    <div class="checkout-layout">
+      <div class="checkout-form">
+        <div class="form-section">
+          <h3>Customer Information</h3>
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" class="form-input" placeholder="Sofia"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" class="form-input" placeholder="Chen"></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" class="form-input" placeholder="sofia@example.com"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" class="form-input" placeholder="+1 (555) 000-0000"></div>
+        </div>
+        <div class="form-section">
+          <h3>Shipping Address</h3>
+          <div class="form-group"><label>Country</label>
+            <select class="form-select">
+              <option>Cambodia</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>Singapore</option>
+              <option>Thailand</option>
+              <option>Vietnam</option>
+              <option>Australia</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Street Address</label><input type="text" class="form-input" placeholder="123 Silk Road, Suite 4"></div>
+          <div class="form-row">
+            <div class="form-group"><label>City</label><input type="text" class="form-input" placeholder="Phnom Penh"></div>
+            <div class="form-group"><label>Postal Code</label><input type="text" class="form-input" placeholder="12000"></div>
+          </div>
+          <div class="form-group">
+            <label>Shipping Method</label>
+            <div style="display:flex;flex-direction:column;gap:.5rem">
+              <label style="display:flex;align-items:center;gap:.75rem;padding:.75rem;border:1.5px solid var(--gold);cursor:pointer;background:var(--cream)"><input type="radio" name="shipping" checked style="accent-color:var(--gold)"><span style="font-size:.875rem;font-weight:500">Standard (3-5 days) — $5.99</span></label>
+              <label style="display:flex;align-items:center;gap:.75rem;padding:.75rem;border:1.5px solid var(--border);cursor:pointer"><input type="radio" name="shipping" style="accent-color:var(--gold)"><span style="font-size:.875rem">Express (1-2 days) — $14.99</span></label>
+              <label style="display:flex;align-items:center;gap:.75rem;padding:.75rem;border:1.5px solid var(--border);cursor:pointer"><input type="radio" name="shipping" style="accent-color:var(--gold)"><span style="font-size:.875rem">Same Day Delivery — $24.99</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <h3>Payment Method</h3>
+          <div class="payment-methods">
+            <div class="payment-method active" onclick="selectPayment(this)"><div style="font-size:1.5rem">💳</div><div class="payment-method-label">Card</div></div>
+            <div class="payment-method" onclick="selectPayment(this)"><div style="font-size:1.5rem">🅿️</div><div class="payment-method-label">PayPal</div></div>
+            <div class="payment-method" onclick="selectPayment(this)"><div style="font-size:1rem;font-weight:700"> Pay</div><div class="payment-method-label">Apple Pay</div></div>
+            <div class="payment-method" onclick="selectPayment(this)"><div style="font-size:1rem;font-weight:700;color:#4285F4">G Pay</div><div class="payment-method-label">Google Pay</div></div>
+            <div class="payment-method" onclick="selectPayment(this)"><div style="font-size:1rem;font-weight:700;color:#1C3F6E">ABA</div><div class="payment-method-label">ABA Pay</div></div>
+            <div class="payment-method" onclick="selectPayment(this)"><div style="font-size:.85rem;font-weight:700;color:#003087">ACLEDA</div><div class="payment-method-label">ACLEDA Pay</div></div>
+          </div>
+          <div id="cardFields">
+            <div class="form-group"><label>Card Number</label><input type="text" class="form-input" placeholder="4242 4242 4242 4242"></div>
+            <div class="form-row">
+              <div class="form-group"><label>Expiry Date</label><input type="text" class="form-input" placeholder="MM / YY"></div>
+              <div class="form-group"><label>CVV</label><input type="text" class="form-input" placeholder="123"></div>
+            </div>
+            <div class="form-group"><label>Name on Card</label><input type="text" class="form-input" placeholder="Sofia Chen"></div>
+          </div>
+        </div>
+        <button class="btn-primary" style="width:100%;padding:1rem;font-size:1rem" onclick="placeOrder()">Place Order — $89.97</button>
+        <p style="font-size:.75rem;color:var(--text-light);text-align:center;margin-top:.75rem">🔒 Your payment is secured with 256-bit SSL encryption</p>
+      </div>
+      <div class="order-summary-checkout">
+        <h3>Order Summary</h3>
+        <div id="checkoutOrderItems"></div>
+        <div style="margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem">
+          <div class="summary-row"><span class="summary-label" style="font-size:.875rem">Subtotal</span><span style="font-size:.9rem">$78.00</span></div>
+          <div class="summary-row"><span class="summary-label" style="font-size:.875rem">Discount (SILK15)</span><span style="font-size:.9rem;color:var(--green)">-$11.70</span></div>
+          <div class="summary-row"><span class="summary-label" style="font-size:.875rem">Shipping</span><span style="font-size:.9rem">$5.99</span></div>
+          <div class="summary-row"><span class="summary-label" style="font-size:.875rem">Tax</span><span style="font-size:.9rem">$7.80</span></div>
+          <div class="summary-row total"><span>Total</span><span>$80.09</span></div>
+        </div>
+        <div style="background:var(--green-pale);border:1px solid #C8E6C9;padding:.75rem;margin-top:.75rem;font-size:.8rem;color:var(--green)">✓ Coupon SILK15 applied — 15% off!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ACCOUNT PAGE ========== -->
+<div class="page" id="page-account">
+  <div class="account-page">
+    <div class="auth-card">
+      <h2>Welcome Back</h2>
+      <p>Sign in to your Natural Silk account or create a new one.</p>
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchAuthTab(this,'login')">Sign In</button>
+        <button class="auth-tab" onclick="switchAuthTab(this,'register')">Create Account</button>
+      </div>
+      <div id="loginForm">
+        <div class="auth-social">
+          <button class="social-auth-btn">🔵 Continue with Google</button>
+          <button class="social-auth-btn">📘 Continue with Facebook</button>
+        </div>
+        <div class="auth-divider"><span>or</span></div>
+        <div class="form-group"><label>Email Address</label><input type="email" class="form-input" placeholder="sofia@example.com"></div>
+        <div class="form-group"><label>Password</label><input type="password" class="form-input" placeholder="••••••••"><a class="forgot-link" href="#">Forgot password?</a></div>
+        <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1.25rem"><input type="checkbox" style="accent-color:var(--gold)"><label style="font-size:.85rem;color:var(--text-light)">Remember me for 30 days</label></div>
+        <button class="btn-primary" style="width:100%;padding:.85rem" onclick="showToast('Welcome back, Sofia! ✨')">Sign In</button>
+      </div>
+      <div id="registerForm" style="display:none">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" class="form-input" placeholder="Sofia"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" class="form-input" placeholder="Chen"></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" class="form-input" placeholder="sofia@example.com"></div>
+        <div class="form-group"><label>Password</label><input type="password" class="form-input" placeholder="Create a password"></div>
+        <div class="form-group"><label>Confirm Password</label><input type="password" class="form-input" placeholder="Repeat password"></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;margin-bottom:1.25rem"><input type="checkbox" style="accent-color:var(--gold);margin-top:3px"><label style="font-size:.82rem;color:var(--text-light)">I agree to the Terms of Service and Privacy Policy</label></div>
+        <button class="btn-primary" style="width:100%;padding:.85rem" onclick="showToast('Account created! Welcome to Natural Silk! 🌿')">Create Account</button>
+      </div>
+    </div>
+
+    <!-- ORDER TRACKING -->
+    <div class="auth-card" style="margin-top:1.5rem">
+      <h2 style="font-size:1.5rem">Track Your Order</h2>
+      <p>Enter your order number to track your delivery.</p>
+      <div style="display:flex;gap:.75rem;margin-top:1rem">
+        <input type="text" class="form-input" placeholder="Order #NS-2025-0042" style="flex:1">
+        <button class="btn-gold" onclick="showToast('Order #NS-2025-0042: Out for delivery! 🚚')">Track</button>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--border);padding:1.25rem;margin-top:1rem;display:none" id="trackingResult">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem">
+          <div><div style="font-weight:600;font-size:.9rem">Order #NS-2025-0042</div><div style="font-size:.78rem;color:var(--text-light)">Estimated delivery: Today, 2-6pm</div></div>
+          <span class="status-badge status-processing">Out for Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ADMIN DASHBOARD ========== -->
+<div class="page" id="page-admin">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-nav-group">
+        <div class="admin-nav-group-label">Overview</div>
+        <div class="admin-nav-item active" onclick="switchAdminSection(this,'dashboard')"><span class="nav-icon">📊</span> Dashboard</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'analytics')"><span class="nav-icon">📈</span> Analytics</div>
+      </div>
+      <div class="admin-nav-group">
+        <div class="admin-nav-group-label">Store</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'products')"><span class="nav-icon">🧴</span> Products</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'inventory')"><span class="nav-icon">📦</span> Inventory</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'orders')"><span class="nav-icon">🛒</span> Orders</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'customers')"><span class="nav-icon">👥</span> Customers</div>
+      </div>
+      <div class="admin-nav-group">
+        <div class="admin-nav-group-label">Marketing</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'discounts')"><span class="nav-icon">🏷️</span> Discounts</div>
+        <div class="admin-nav-item" onclick="switchAdminSection(this,'reports')"><span class="nav-icon">📋</span> Reports</div>
+      </div>
+      <div class="admin-nav-group">
+        <div class="admin-nav-group-label">Settings</div>
+        <div class="admin-nav-item"><span class="nav-icon">⚙️</span> Settings</div>
+        <div class="admin-nav-item" onclick="showPage('home')"><span class="nav-icon">🏪</span> View Store</div>
+      </div>
+    </aside>
+    <div class="admin-main">
+      <!-- DASHBOARD SECTION -->
+      <div id="admin-dashboard">
+        <div class="admin-header">
+          <div><h1>Dashboard</h1><p>Sunday, May 31, 2025 — Good morning, Admin!</p></div>
+          <button class="btn-primary" style="padding:.65rem 1.25rem" onclick="showToast('Report exported!')">Export Report</button>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Total Revenue</div><div class="metric-value">$48,230</div><div class="metric-change metric-up">↑ 18.2% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">Total Orders</div><div class="metric-value">1,284</div><div class="metric-change metric-up">↑ 12.5% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">New Customers</div><div class="metric-value">342</div><div class="metric-change metric-up">↑ 8.7% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">Avg. Order Value</div><div class="metric-value">$37.57</div><div class="metric-change metric-up">↑ 5.1% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">Return Rate</div><div class="metric-value">2.1%</div><div class="metric-change metric-down">↓ 0.4% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">Conversion Rate</div><div class="metric-value">4.8%</div><div class="metric-change metric-up">↑ 1.2% vs last month</div></div>
+        </div>
+        <div class="admin-grid-2">
+          <div class="admin-card">
+            <h3>Revenue (Last 7 Days) <a href="#">View full report</a></h3>
+            <div class="chart-area" id="revenueChart"></div>
+            <div class="chart-labels" id="chartLabels"></div>
+          </div>
+          <div class="admin-card">
+            <h3>Top Products <a href="#">View all</a></h3>
+            <div id="topProductsList"></div>
+          </div>
+        </div>
+        <div class="admin-grid-2">
+          <div class="admin-card">
+            <h3>Recent Orders <a href="#">View all</a></h3>
+            <table class="admin-table" id="recentOrdersTable">
+              <thead><tr><th>Order</th><th>Customer</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody id="recentOrdersBody"></tbody>
+            </table>
+          </div>
+          <div class="admin-card">
+            <h3>Inventory Status <a href="#">Manage</a></h3>
+            <div id="inventoryList"></div>
+          </div>
+        </div>
+      </div>
+      <!-- OTHER SECTIONS (shown dynamically) -->
+      <div id="admin-products" style="display:none">
+        <div class="admin-header"><div><h1>Products</h1><p>Manage your product catalog</p></div><button class="btn-primary" onclick="showToast('Product creation form opened!')">+ Add Product</button></div>
+        <div class="admin-card">
+          <div style="display:flex;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+            <input type="text" class="form-input" placeholder="Search products..." style="max-width:280px">
+            <select class="form-select" style="width:auto">
+              <option>All Categories</option>
+              <option>Daily Care</option>
+              <option>Repair</option>
+              <option>Anti-Hair Fall</option>
+            </select>
+            <button class="btn-outline" style="padding:.5rem 1rem">Filter</button>
+          </div>
+          <table class="admin-table">
+            <thead><tr><th>Product</th><th>SKU</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="adminProductsBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="admin-orders" style="display:none">
+        <div class="admin-header"><div><h1>Orders</h1><p>Manage and fulfill customer orders</p></div></div>
+        <div class="admin-card">
+          <table class="admin-table">
+            <thead><tr><th>Order ID</th><th>Customer</th><th>Products</th><th>Total</th><th>Payment</th><th>Status</th><th>Date</th></tr></thead>
+            <tbody id="adminOrdersBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="admin-customers" style="display:none">
+        <div class="admin-header"><div><h1>Customers</h1><p>Manage your customer relationships</p></div></div>
+        <div class="admin-card">
+          <table class="admin-table">
+            <thead><tr><th>Name</th><th>Email</th><th>Orders</th><th>Spent</th><th>Location</th><th>Joined</th></tr></thead>
+            <tbody id="adminCustomersBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="admin-discounts" style="display:none">
+        <div class="admin-header"><div><h1>Discounts</h1><p>Create and manage promotional codes</p></div><button class="btn-primary" onclick="showToast('Discount creation form opened!')">+ New Discount</button></div>
+        <div class="admin-card">
+          <table class="admin-table">
+            <thead><tr><th>Code</th><th>Type</th><th>Value</th><th>Usage</th><th>Expires</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>SILK15</strong></td><td>Percentage</td><td>15% off</td><td>324 / 500</td><td>Dec 31, 2025</td><td><span class="status-badge status-delivered">Active</span></td></tr>
+              <tr><td><strong>NEWUSER20</strong></td><td>Percentage</td><td>20% off</td><td>89 / ∞</td><td>Unlimited</td><td><span class="status-badge status-delivered">Active</span></td></tr>
+              <tr><td><strong>FREESHIP</strong></td><td>Free Shipping</td><td>$0 shipping</td><td>156 / 200</td><td>Jun 30, 2025</td><td><span class="status-badge status-pending">Expiring Soon</span></td></tr>
+              <tr><td><strong>SUMMER30</strong></td><td>Percentage</td><td>30% off</td><td>500 / 500</td><td>Sep 1, 2024</td><td><span class="status-badge status-cancelled">Expired</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="admin-analytics" style="display:none">
+        <div class="admin-header"><div><h1>Analytics</h1><p>Deep insights into your business performance</p></div></div>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">Page Views</div><div class="metric-value">124K</div><div class="metric-change metric-up">↑ 22% this month</div></div>
+          <div class="metric-card"><div class="metric-label">Unique Visitors</div><div class="metric-value">38,400</div><div class="metric-change metric-up">↑ 15% this month</div></div>
+          <div class="metric-card"><div class="metric-label">Bounce Rate</div><div class="metric-value">28%</div><div class="metric-change metric-down">↓ 3.2% improved</div></div>
+          <div class="metric-card"><div class="metric-label">Avg. Session</div><div class="metric-value">4:32</div><div class="metric-change metric-up">↑ 0.8min</div></div>
+        </div>
+        <div class="admin-card" style="margin-top:0">
+          <h3>Traffic Sources</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem">
+            <div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.3rem"><span>Organic Search</span><span style="font-weight:600">42%</span></div><div style="height:8px;background:var(--cream-dark);border-radius:4px"><div style="height:100%;width:42%;background:var(--gold);border-radius:4px"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.3rem"><span>Social Media</span><span style="font-weight:600">28%</span></div><div style="height:8px;background:var(--cream-dark);border-radius:4px"><div style="height:100%;width:28%;background:var(--green);border-radius:4px"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.3rem"><span>Direct</span><span style="font-weight:600">18%</span></div><div style="height:8px;background:var(--cream-dark);border-radius:4px"><div style="height:100%;width:18%;background:var(--brown);border-radius:4px"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.3rem"><span>Referral</span><span style="font-weight:600">12%</span></div><div style="height:8px;background:var(--cream-dark);border-radius:4px"><div style="height:100%;width:12%;background:var(--gold-light);border-radius:4px"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div id="admin-inventory" style="display:none">
+        <div class="admin-header"><div><h1>Inventory</h1><p>Track and manage stock levels</p></div><button class="btn-primary" onclick="showToast('Restock order created!')">Restock Low Items</button></div>
+        <div class="admin-card">
+          <table class="admin-table">
+            <thead><tr><th>Product</th><th>SKU</th><th>Stock</th><th>Low Alert</th><th>Status</th><th>Last Updated</th></tr></thead>
+            <tbody id="adminInventoryBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="admin-reports" style="display:none">
+        <div class="admin-header"><div><h1>Reports</h1><p>Generate and export business reports</p></div></div>
+        <div class="metrics-grid">
+          <div class="admin-card" style="cursor:pointer" onclick="showToast('Generating Sales Report...')"><h3>📊 Sales Report</h3><p style="font-size:.85rem;color:var(--text-light);font-weight:300">Monthly, quarterly, and yearly sales breakdowns</p></div>
+          <div class="admin-card" style="cursor:pointer" onclick="showToast('Generating Customer Report...')"><h3>👥 Customer Report</h3><p style="font-size:.85rem;color:var(--text-light);font-weight:300">Customer acquisition, retention, and lifetime value</p></div>
+          <div class="admin-card" style="cursor:pointer" onclick="showToast('Generating Product Report...')"><h3>🧴 Product Report</h3><p style="font-size:.85rem;color:var(--text-light);font-weight:300">Best sellers, slow movers, and inventory trends</p></div>
+          <div class="admin-card" style="cursor:pointer" onclick="showToast('Generating Financial Report...')"><h3>💰 Financial Report</h3><p style="font-size:.85rem;color:var(--text-light);font-weight:300">Revenue, costs, margins, and profit analysis</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== DATA ======
+const products = [
+  {id:1,name:'Natural Silk Daily Shampoo',price:28,oldPrice:35,rating:4.9,reviews:248,badge:'Best Seller',emoji:'🧴',color:'#D4B896',desc:'Gentle daily cleanser with silk proteins for everyday nourishment and shine.'},
+  {id:2,name:'Natural Silk Repair Shampoo',price:32,oldPrice:40,rating:4.8,reviews:186,badge:'Popular',emoji:'✨',color:'#9FE1CB',desc:'Intensive repair formula for damaged, over-processed hair. Restores strength.'},
+  {id:3,name:'Natural Silk Anti-Hair Fall Shampoo',price:30,oldPrice:38,rating:4.9,reviews:312,badge:'Top Rated',emoji:'💚',color:'#C8E6C9',desc:'Clinically proven to reduce hair fall by up to 89%. Strengthens from root.'},
+  {id:4,name:'Natural Silk Moisturizing Shampoo',price:26,oldPrice:33,rating:4.7,reviews:142,badge:'New',emoji:'💙',color:'#B5D4F4',desc:'Ultra-hydrating formula for dry, brittle hair. Seals in moisture all day.'},
+  {id:5,name:'Natural Silk Keratin Shampoo',price:35,oldPrice:44,rating:4.9,reviews:275,badge:'Premium',emoji:'👑',color:'#F4C0D1',desc:'Professional-grade keratin treatment in a luxurious daily shampoo.'},
+];
+
+const cartItems = [
+  {id:1,name:'Natural Silk Daily Shampoo',variant:'300ml',price:28,qty:2},
+  {id:3,name:'Natural Silk Anti-Hair Fall Shampoo',variant:'300ml',price:30,qty:1},
+];
+
+const recentOrders = [
+  {id:'#NS-1284',customer:'REAM',amount:'$84.00',status:'delivered',date:'May 31'},
+  {id:'#NS-1283',customer:'King',amount:'$32.00',status:'processing',date:'May 31'},
+  {id:'#NS-1282',customer:'Aisha Patel',amount:'$56.00',status:'pending',date:'May 30'},
+  {id:'#NS-1281',customer:'Laura Kim',amount:'$140.00',status:'delivered',date:'May 30'},
+  {id:'#NS-1280',customer:'Jessica Wu',amount:'$28.00',status:'cancelled',date:'May 29'},
+];
+
+// ====== PAGE NAVIGATION ======
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  const pg = document.getElementById('page-'+pageId);
+  if(pg){pg.classList.add('active');window.scrollTo(0,0);}
+  const nav = document.getElementById('nav-'+pageId);
+  if(nav) nav.classList.add('active');
+  if(pageId==='cart') renderCart();
+  if(pageId==='checkout') renderCheckoutSummary();
+  if(pageId==='admin') initAdmin();
+}
+
+function scrollToSection(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+}
+
+// ====== BOTTLE SVG GENERATOR ======
+
+
+// ====== RENDER PRODUCTS ======
+function renderProductCard(p, compact=false){
+  const stars = '★'.repeat(Math.floor(p.rating))+'☆'.repeat(5-Math.floor(p.rating));
+  const size = compact ? 65 : 80;
+  return `<div class="product-card" onclick="showPage('product')">
+    ${p.badge?`<div class="product-badge">${p.badge}</div>`:''}
+    <div class="product-wish" onclick="event.stopPropagation();toggleWish(this)">♡</div>
+    <div class="product-img-wrap">
+      <img src="list${p.id}.png" alt="${p.name}" class="product-image">
+      <div class="product-quick" onclick="event.stopPropagation();openQuickView(${p.id})">Quick View</div>
+    </div>
+    <div class="product-info">
+      <div class="product-name">${p.name}</div>
+      <div class="product-stars">${stars} <span>(${p.reviews})</span></div>
+      <div class="product-price">$${p.price}.00 <span class="old">$${p.oldPrice}.00</span></div>
+      <button class="product-add" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
+    </div>
+  </div>`;
+}
+
+function renderHomeProducts(){
+  const el = document.getElementById('homeProducts');
+  if(el) el.innerHTML = products.map(p=>renderProductCard(p)).join('');
+}
+
+function filterShop(){
+  const search = (document.getElementById('shopSearch')||{}).value||'';
+  const filtered = products.filter(p=>p.name.toLowerCase().includes(search.toLowerCase()));
+  const el = document.getElementById('shopGrid');
+  if(el){
+    el.innerHTML = filtered.map(p=>renderProductCard(p,true)).join('');
+    const count = document.getElementById('shopCount');
+    if(count) count.textContent = `Showing ${filtered.length} product${filtered.length!==1?'s':''}`;
+  }
+}
+
+// ====== CART ======
+function addToCart(id){
+  const p = products.find(x=>x.id===id);
+  if(p){
+    const badge = document.getElementById('cartBadge');
+    const cur = parseInt(badge.textContent||0);
+    badge.textContent = cur+1;
+    showToast(`${p.name} added to cart! 🛒`);
+  }
+}
+
+function renderCart(){
+  const el = document.getElementById('cartItemsList');
+  if(!el) return;
+  el.innerHTML = cartItems.map(item=>{
+    const product = products.find(p=>p.id===item.id);
+    return `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <div class="cart-item-img"><img src="list${item.id}.png" alt="${product.name}" class="cart-item-image"></div>
+          <div><div class="cart-item-name">${item.name}</div><div class="cart-item-variant">${item.variant}</div></div>
+        </div>
+        <div class="cart-item-price">$${item.price}.00</div>
+        <div>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="updateCartQty(${item.id},-1)">−</button>
+            <input type="number" class="qty-num" value="${item.qty}" min="1" id="cartQty${item.id}" onchange="updateCartTotals()">
+            <button class="qty-btn" onclick="updateCartQty(${item.id},1)">+</button>
+          </div>
+        </div>
+        <div class="cart-item-total">$${(item.price*item.qty).toFixed(2)}</div>
+        <button class="cart-remove" onclick="removeCartItem(${item.id})">✕</button>
+      </div>
+    `;
+  }).join('');
+  updateCartTotals();
+}
+
+function updateCartQty(id,delta){
+  const item = cartItems.find(x=>x.id===id);
+  if(item){item.qty=Math.max(1,item.qty+delta);renderCart();}
+}
+function removeCartItem(id){
+  const idx=cartItems.findIndex(x=>x.id===id);
+  if(idx>-1){cartItems.splice(idx,1);renderCart();}
+}
+function updateCartTotals(){
+  const subtotal = cartItems.reduce((s,i)=>s+i.price*i.qty,0);
+  const discount = 0;
+  const shipping = subtotal>50?0:5.99;
+  const tax = subtotal*0.1;
+  const total = subtotal-discount+shipping+tax;
+  const s=v=>document.getElementById(v);
+  if(s('cartSubtotal')) s('cartSubtotal').textContent='$'+subtotal.toFixed(2);
+  if(s('cartDiscount')) s('cartDiscount').textContent='-$'+discount.toFixed(2);
+  if(s('cartShipping')) s('cartShipping').textContent=shipping===0?'Free':'$'+shipping.toFixed(2);
+  if(s('cartTax')) s('cartTax').textContent='$'+tax.toFixed(2);
+  if(s('cartTotal')) s('cartTotal').textContent='$'+total.toFixed(2);
+}
+function applyCoupon(){showToast('Coupon SILK15 applied! 15% discount added ✓');}
+
+function renderCheckoutSummary(){
+  const el=document.getElementById('checkoutOrderItems');
+  if(!el) return;
+  el.innerHTML = cartItems.map(item=>`
+    <div class="order-item">
+      <div class="order-item-img"><img src="list${item.id}.png" alt="${item.name}" class="order-item-image"><span class="order-item-qty">${item.qty}</span></div>
+      <span class="order-item-name">${item.name} (${item.variant})</span>
+      <span class="order-item-price">$${(item.price*item.qty).toFixed(2)}</span>
+    </div>
+  `).join('');
+}
+
+// ====== PRODUCT DETAIL ======
+function renderRelatedProducts(){
+  const el = document.getElementById('relatedProducts');
+  if(el) el.innerHTML = products.slice(1,5).map(p=>renderProductCard(p,true)).join('');
+}
+
+function switchTab(btn, tabId){
+  document.querySelectorAll('.pd-tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.pd-tab-content').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  const tab = document.getElementById(tabId);
+  if(tab) tab.classList.add('active');
+}
+
+function changeQty(delta){
+  const input=document.getElementById('pdQty');
+  if(input) input.value=Math.max(1,parseInt(input.value)+delta);
+}
+
+// ====== ACCOUNT ======
+function switchAuthTab(btn,form){
+  document.querySelectorAll('.auth-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('loginForm').style.display=form==='login'?'block':'none';
+  document.getElementById('registerForm').style.display=form==='register'?'block':'none';
+}
+
+// ====== CHECKOUT ======
+function selectPayment(el){
+  document.querySelectorAll('.payment-method').forEach(m=>m.classList.remove('active'));
+  el.classList.add('active');
+}
+function placeOrder(){showToast('🎉 Order placed successfully! Confirmation email sent.');}
+
+// ====== QUICK VIEW MODAL ======
+function openQuickView(id){
+  const p=products.find(x=>x.id===id);
+  if(!p) return;
+  const stars='★'.repeat(Math.floor(p.rating))+'☆'.repeat(5-Math.floor(p.rating));
+  document.getElementById('quickModalContent').innerHTML=`
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+      <div style="flex:1;min-width:180px;background:var(--cream);padding:2rem;display:flex;align-items:center;justify-content:center">
+        <img src="list${p.id}.png" alt="${p.name}" style="max-width:100%; height:auto;">
+      </div>
+      <div style="flex:2;min-width:200px">
+        <div style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem">Quick View</div>
+        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:400;color:var(--charcoal);margin-bottom:.4rem">${p.name}</h2>
+        <div style="color:var(--gold);font-size:.9rem;margin-bottom:.6rem">${stars} <span style="color:var(--text-light);font-size:.8rem">(${p.reviews})</span></div>
+        <div style="font-size:1.4rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem">$${p.price}.00 <span style="font-size:.9rem;color:var(--text-light);text-decoration:line-through;font-weight:400">$${p.oldPrice}.00</span></div>
+        <p style="font-size:.875rem;color:var(--text-light);line-height:1.7;margin-bottom:1.25rem;font-weight:300">${p.desc}</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <button class="btn-primary" style="flex:1" onclick="addToCart(${p.id});closeModal()">Add to Cart</button>
+          <button class="btn-outline" onclick="showPage('product');closeModal()">View Full Details</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('quickModal').classList.add('show');
+}
+function closeModal(){document.getElementById('quickModal').classList.remove('show');}
+document.getElementById('quickModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+
+// ====== WISHLIST ======
+function toggleWish(btn){btn.classList.toggle('active');btn.textContent=btn.classList.contains('active')?'♥':'♡';}
+
+// ====== BEFORE AFTER SLIDER ======
+let isDragging=false;
+const slider=document.getElementById('baSlider');
+const before=document.getElementById('baBefore');
+const divider=document.getElementById('baDivider');
+const handle=document.getElementById('baHandle');
+
+function moveSplit(e){
+  if(!isDragging) return;
+  const rect=slider.getBoundingClientRect();
+  const clientX=e.touches?e.touches[0].clientX:e.clientX;
+  let pct=((clientX-rect.left)/rect.width)*100;
+  pct=Math.max(5,Math.min(95,pct));
+  before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+  divider.style.left=pct+'%';
+  handle.style.left=pct+'%';
+}
+slider.addEventListener('mousedown',()=>isDragging=true);
+slider.addEventListener('touchstart',()=>isDragging=true);
+document.addEventListener('mouseup',()=>isDragging=false);
+document.addEventListener('touchend',()=>isDragging=false);
+document.addEventListener('mousemove',moveSplit);
+document.addEventListener('touchmove',moveSplit);
+
+// ====== TOAST ======
+function showToast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toastMsg').textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ====== SIZE BTNS ======
+document.querySelectorAll('.size-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    this.closest('.pd-size-btns').querySelectorAll('.size-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ====== ADMIN DASHBOARD ======
+function initAdmin(){
+  renderRevenueChart();
+  renderTopProducts();
+  renderRecentOrders();
+  renderInventory();
+  renderAdminProducts();
+  renderAdminOrders();
+  renderAdminCustomers();
+  renderAdminInventory();
+}
+
+function switchAdminSection(nav,section){
+  document.querySelectorAll('.admin-nav-item').forEach(n=>n.classList.remove('active'));
+  nav.classList.add('active');
+  ['dashboard','products','orders','customers','discounts','reports','analytics','inventory'].forEach(s=>{
+    const el=document.getElementById('admin-'+s);
+    if(el) el.style.display=s===section?'block':'none';
+  });
+}
+
+function renderRevenueChart(){
+  const data=[3200,4100,3800,5200,4700,6100,5800];
+  const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const max=Math.max(...data);
+  const chart=document.getElementById('revenueChart');
+  const labels=document.getElementById('chartLabels');
+  if(!chart) return;
+  chart.innerHTML=data.map((v,i)=>`<div class="chart-bar" style="height:${(v/max*100)}%" title="${days[i]}: $${v.toLocaleString()}"><div class="tooltip">$${v.toLocaleString()}</div></div>`).join('');
+  labels.innerHTML=days.map(d=>`<div class="chart-label">${d}</div>`).join('');
+}
+
+function renderTopProducts(){
+  const top=[
+    {name:'Anti-Hair Fall Shampoo',sales:'312 units',rev:'$9,360'},
+    {name:'Keratin Shampoo',sales:'275 units',rev:'$9,625'},
+    {name:'Natural Silk Daily',sales:'248 units',rev:'$6,944'},
+    {name:'Repair Shampoo',sales:'186 units',rev:'$5,952'},
+    {name:'Moisturizing Shampoo',sales:'142 units',rev:'$3,692'},
+  ];
+  const el=document.getElementById('topProductsList');
+  if(!el) return;
+  el.innerHTML=top.map((p,i)=>`<div class="top-product"><div class="top-product-rank">${i+1}</div><div class="top-product-info"><div class="top-product-name">${p.name}</div><div class="top-product-sales">${p.sales}</div></div><div class="top-product-rev">${p.rev}</div></div>`).join('');
+}
+
+function renderRecentOrders(){
+  const el=document.getElementById('recentOrdersBody');
+  if(!el) return;
+  el.innerHTML=recentOrders.map(o=>`<tr><td><strong>${o.id}</strong></td><td>${o.customer}</td><td><strong>${o.amount}</strong></td><td><span class="status-badge status-${o.status}">${o.status}</span></td><td>${o.date}</td></tr>`).join('');
+}
+
+function renderInventory(){
+  const items=[
+    {name:'Daily Shampoo 300ml',stock:142,max:300,level:'high'},
+    {name:'Repair Shampoo 300ml',stock:89,max:300,level:'med'},
+    {name:'Anti-Hair Fall 300ml',stock:18,max:300,level:'low'},
+    {name:'Keratin Shampoo 500ml',stock:56,max:200,level:'med'},
+    {name:'Moisturizing 300ml',stock:203,max:300,level:'high'},
+  ];
+  const el=document.getElementById('inventoryList');
+  if(!el) return;
+  el.innerHTML=items.map(i=>`<div class="top-product"><div class="top-product-info"><div class="top-product-name">${i.name}</div><div class="inventory-bar"><div class="inventory-fill fill-${i.level}" style="width:${(i.stock/i.max*100)}%"></div></div></div><div style="font-size:.85rem;font-weight:600;color:var(--charcoal);min-width:36px;text-align:right">${i.stock}</div></div>`).join('');
+}
+
+function renderAdminProducts(){
+  const el=document.getElementById('adminProductsBody');
+  if(!el) return;
+  el.innerHTML=products.map(p=>`<tr><td><strong>${p.name}</strong></td><td>NS-${String(p.id).padStart(4,'0')}</td><td>$${p.price}.00</td><td>${Math.floor(Math.random()*200+50)}</td><td><span class="status-badge status-delivered">Active</span></td><td><button class="btn-outline" style="padding:.3rem .7rem;font-size:.75rem" onclick="showToast('Editing ${p.name}...')">Edit</button></td></tr>`).join('');
+}
+
+function renderAdminOrders(){
+  const el=document.getElementById('adminOrdersBody');
+  if(!el) return;
+  el.innerHTML=recentOrders.concat([
+    {id:'#NS-1279',customer:'Emma Wilson',amount:'$35.00',status:'delivered',date:'May 29'},
+    {id:'#NS-1278',customer:'Rina Nakamura',amount:'$62.00',status:'processing',date:'May 28'},
+  ]).map(o=>`<tr><td><strong>${o.id}</strong></td><td>${o.customer}</td><td>1-2 items</td><td><strong>${o.amount}</strong></td><td>Card</td><td><span class="status-badge status-${o.status}">${o.status}</span></td><td>${o.date}</td></tr>`).join('');
+}
+
+function renderAdminCustomers(){
+  const el=document.getElementById('adminCustomersBody');
+  if(!el) return;
+  const customers=[
+    {name:'REAM',email:'ream@example.com',orders:8,spent:'$224',loc:'Singapore',joined:'Jan 2025'},
+    {name:'KING',email:'maya@example.com',orders:5,spent:'$160',loc:'Miami, US',joined:'Feb 2025'},
+    {name:'Aisha Patel',email:'aisha@example.com',orders:12,spent:'$336',loc:'London, UK',joined:'Nov 2024'},
+    {name:'Laura Kim',email:'laura@example.com',orders:3,spent:'$96',loc:'Seoul, KR',joined:'Mar 2025'},
+    {name:'Joship Wu',email:'jessica@example.com',orders:20,spent:'$560',loc:'Shanghai, CN',joined:'Aug 2024'},
+  ];
+  el.innerHTML=customers.map(c=>`<tr><td><strong>${c.name}</strong></td><td>${c.email}</td><td>${c.orders}</td><td><strong>${c.spent}</strong></td><td>${c.loc}</td><td>${c.joined}</td></tr>`).join('');
+}
+
+function renderAdminInventory(){
+  const el=document.getElementById('adminInventoryBody');
+  if(!el) return;
+  const items=[
+    {name:'Daily Shampoo 300ml',sku:'NS-0001',stock:142,alert:50,level:'high'},
+    {name:'Repair Shampoo 300ml',sku:'NS-0002',stock:89,alert:50,level:'med'},
+    {name:'Anti-Hair Fall 300ml',sku:'NS-0003',stock:18,alert:50,level:'low'},
+    {name:'Keratin Shampoo 500ml',sku:'NS-0005',stock:56,alert:30,level:'med'},
+    {name:'Moisturizing 300ml',sku:'NS-0004',stock:203,alert:50,level:'high'},
+  ];
+  const statusMap={high:'delivered',med:'pending',low:'cancelled'};
+  const labelMap={high:'In Stock',med:'Low Stock',low:'Critical'};
+  el.innerHTML=items.map(i=>`<tr><td><strong>${i.name}</strong></td><td>${i.sku}</td><td>${i.stock} units</td><td>${i.alert} units</td><td><span class="status-badge status-${statusMap[i.level]}">${labelMap[i.level]}</span></td><td>Today</td></tr>`).join('');
+}
+
+// ====== INIT ======
+renderHomeProducts();
+filterShop();
+renderRelatedProducts();
+renderCart();
+
+// ====== MOBILE MENU ======
+function toggleMobileMenu(){
+  const links=document.querySelector('.nav-links');
+  const hamburger=document.querySelector('.hamburger');
+  const isOpen=links.style.display==='flex';
+  
+  links.style.display=isOpen?'none':'flex';
+  links.style.flexDirection='column';
+  links.style.position='absolute';
+  links.style.top='80px';
+  links.style.left='0';
+  links.style.right='0';
+  links.style.background='rgba(255,255,255,0.95)';
+  links.style.padding='1.5rem 2rem';
+  links.style.borderBottom='1px solid var(--border)';
+  links.style.zIndex='999';
+  links.style.backdropFilter='blur(12px)';
+  links.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)';
+  
+  hamburger.classList.toggle('active', !isOpen);
+}
+
+// ====== THUMB ACTIVE ======
+document.querySelectorAll('.pd-thumb').forEach(t=>{
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.pd-thumb').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
